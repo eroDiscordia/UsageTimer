@@ -1,0 +1,74 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsageTimer"
+        xmlns:Helpers="clr-namespace:UsageTimer.Helpers" x:Class="UsageTimer.MainWindow"
+        mc:Ignorable="d" Height="150" Width="500" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="#121212" MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderThickness="1" Foreground="{DynamicResource AppNameGreenBrush}" BorderBrush="{DynamicResource AppNameDarkGreenBrush}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source=".\Color\FinalColors.xaml" />
+                <ResourceDictionary Source=".\Color\GreyColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.DataContext>
+        <Helpers:StateTimer/>
+    </Window.DataContext>
+    <Grid x:Name="LayoutRootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" MinHeight="5"/>
+            <RowDefinition/>
+            <RowDefinition Height="5" MinHeight="5"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="5" Width="5"/>
+            <ColumnDefinition Width="360"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition MinWidth="5" Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="OutputLayoutRootGrid" Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28"/>
+                <RowDefinition/>
+                <RowDefinition Height="28"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="CurrentApplicationLabel" Grid.Row="0" Grid.Column="0" Content="Current Application" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}"/>
+            <Label x:Name="CurrentApplicationTimeLabel" Grid.Row="1" Grid.Column="0" Content="Time" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48"/>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="70*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="CurrentColorTextLabel" Grid.Row="0" Grid.Column="0" Content="Color: " Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" />
+                <Label x:Name="CurrentColorNameLabel" Grid.Row="0" Grid.Column="1" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" />
+            </Grid>
+
+
+
+        </Grid>
+        <Grid x:Name="ControlsLayoutRootGrid" Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <Button x:Name="OnButton"  Content="On" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="OnButton_Click"/>
+                <Rectangle Height="15"/>
+                <Button x:Name="OffButton" Content="Off" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="OffButton_Click"/>
+                
+                
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Button x:Name="NextColorButton" Content="Next" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="NextColorButton_Click" />
+                <Button x:Name="LastColorButton" Content="Last" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="LastColorButton_Click" />
+                <Rectangle x:Name="ColorRectangle" Height="25"/>
+            </StackPanel>
+            
+            
+
+        </Grid>
+    </Grid>
+</Window>
