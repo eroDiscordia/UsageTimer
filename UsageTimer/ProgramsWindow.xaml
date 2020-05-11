@@ -1,0 +1,65 @@
+﻿<Window x:Name="ProgramsView" x:Class="UsageTimer.ProgramsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UsageTimer"          
+        mc:Ignorable="d" Height="349" Width="500" WindowStartupLocation="CenterOwner" 
+        ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True"  
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderThickness="1" 
+        Background="{DynamicResource AppNameBackGroundBrush}"
+        Foreground="{DynamicResource AppNameGreenBrush}" 
+        BorderBrush="{DynamicResource AppNameDarkGreenBrush}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source=".\Color\FinalColors.xaml" />
+                <ResourceDictionary Source=".\Color\GreyColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid x:Name="LayoutRootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" MinHeight="5"/>
+            <RowDefinition/>
+            <RowDefinition Height="5" MinHeight="5"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="5" Width="5"/>
+            <ColumnDefinition Width="360"/>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition MinWidth="5" Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="OutputLayoutRootGrid" Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <ListBox x:Name="OutputListBox" Grid.Row="1" Foreground="{DynamicResource AppNameBlue2Brush}" Background="{x:Null}"/>
+        </Grid>
+        <Grid x:Name="ControlsLayoutRootGrid" Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <Rectangle Height="5" />
+                <Button x:Name="GetProgramsButton" Content="Get Programs" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="GetProgramsButton_Click" />
+                <Button x:Name="ShowProgramsButton" Content="Show Programs" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="ShowProgramsButton_Click"  />
+                <Rectangle Height="15"/>
+                
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Button x:Name="CloseButton" Content="Close" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="CloseButton_Click" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -9,7 +9,7 @@ namespace Doghouse.Tools
 
         public int CurrentIndex
         {
-            
+
             get
             {
                 if (_currentIndex == Count)
@@ -27,25 +27,7 @@ namespace Doghouse.Tools
 
                 return _currentIndex;
             }
-            
-          /*  get
-            {
 
-                if (_currentIndex > Count - 1)
-                {
-                    _currentIndex = Count - 1;
-                }
-                else if (_currentIndex < 0)
-                {
-                    _currentIndex = 0;
-                }
-                else if (_currentIndex == Count)
-                {
-                    _currentIndex = 0;
-                }
-
-                return _currentIndex;
-            }*/
             set { _currentIndex = value; }
         }
 
@@ -66,9 +48,9 @@ namespace Doghouse.Tools
 
         public T MovePrevious
         {
-            get 
-            { 
-                if(_currentIndex == 0)
+            get
+            {
+                if (_currentIndex == 0)
                 {
                     _currentIndex = Count - 1;
                 }
@@ -76,7 +58,6 @@ namespace Doghouse.Tools
                 {
                     _currentIndex--;
                 }
-                // _currentIndex--; return this[CurrentIndex]; }
                 return this[CurrentIndex];
             }
         }

@@ -12,6 +12,8 @@
     <Color x:Key="AppNameRed">#F66F7C</Color>
     <Color x:Key="AppNameBackGround">#121212</Color>
     <Color x:Key="AppNameForeGround">#FFFFFF</Color>
+    
+    
     <!--    Make Final Decision On Control Disabled Color   -->
     <Color x:Key="AppNameDisabledControl">#2a2a2a</Color>
     <Color x:Key="AppNameDisabledControl2">#373737</Color>
@@ -21,6 +23,8 @@
     <Color x:Key="AppNameControlBackGround2">#0B0B0B</Color>
     <Color x:Key="AppNameControlBackGround3">#FF0E0E0E</Color>
     <!--    Need Control Border   -->
+    
+    
     <SolidColorBrush x:Key="AppNameGreenBrush" Color="{DynamicResource AppNameGreen}" />
     <SolidColorBrush x:Key="AppNameDarkGreenBrush" Color="{DynamicResource AppNameDarkGreen}" />
     <SolidColorBrush x:Key="AppNameOrangeBrush" Color="{DynamicResource AppNameOrange}" />
@@ -32,6 +36,8 @@
     <SolidColorBrush x:Key="AppNameRedBrush" Color="{DynamicResource AppNameRed}" />
     <SolidColorBrush x:Key="AppNameBackGroundBrush" Color="{DynamicResource AppNameBackGround}" />
     <SolidColorBrush x:Key="AppNameForeGroundBrush" Color="{DynamicResource AppNameForeGround}" />
+    
+    
     <!--    Make Final Decision On Control Disabled Color   -->
     <SolidColorBrush x:Key="AppNameDisabledControlBrush" Color="{DynamicResource AppNameDisabledControl}" />
     <SolidColorBrush x:Key="AppNameDisabledControl2Brush" Color="{DynamicResource AppNameDisabledControl2}" />

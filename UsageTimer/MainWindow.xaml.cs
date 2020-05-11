@@ -26,6 +26,7 @@ namespace UsageTimer
     public partial class MainWindow : Window
     {
 
+        int pbarTest;
         ProgramTimer programTimer;
         StateTimer stateTimer;
         CustomList<string> colorNames;
@@ -85,6 +86,11 @@ namespace UsageTimer
 
         private void StateTimer_StateTimeChanged(object sender, StateTimerEventArgs e)
         {
+            pbarTest++;
+            GreenProgressBarUserControl.Value = pbarTest;
+            OrangeProgressBarUserControl.Value = pbarTest;
+            PurpleProgressBarUserControl.Value = pbarTest;
+          //  YellowProgressBarUserControl.Value = pbarTest;
             CurrentApplicationTimeLabel.Content = stateTimer.StateTime;
         }
 
@@ -151,5 +157,22 @@ namespace UsageTimer
            
         }
 
+        private void ProgramsWindowButton_Click(object sender, RoutedEventArgs e)
+        {
+            var programsWindow = new ProgramsWindow();
+            programsWindow.Show();
+        }
+
+        private void StringTestButton_Click(object sender, RoutedEventArgs e)
+        {
+            TimeSpan interval = new TimeSpan(0, 32, 45);
+            // Escape literal characters in a format string.
+            string t = $"";
+            string fmt = @"mm\:ss\ \m\i\n\u\t\e\s";
+            Debug.WriteLine(interval.ToString(fmt));
+            // Delimit literal characters in a format string with the ' symbol.
+            fmt = "mm':'ss' minutes'";
+            Debug.WriteLine(interval.ToString(fmt));
+        }
     }
 }

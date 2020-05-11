@@ -11,6 +11,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source=".\Color\FinalColors.xaml" />
                 <ResourceDictionary Source=".\Color\GreyColors.xaml" />
+                <ResourceDictionary Source=".\Style\PBar.xaml" />
+                <ResourceDictionary Source=".\Style\GreenProgressBarStyle.xaml" />
+                <ResourceDictionary Source=".\Style\OrangeProgressBarStyle.xaml" />
+                <ResourceDictionary Source=".\Style\PurpleProgressBarStyle.xaml" />
+                <ResourceDictionary Source=".\Style\RedProgressBarStyle.xaml" />
+                <ResourceDictionary Source=".\Style\YellowProgressBarStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -35,7 +41,28 @@
                 <RowDefinition/>
                 <RowDefinition Height="28"/>
             </Grid.RowDefinitions>
-            <Label x:Name="CurrentApplicationLabel" Grid.Row="0" Grid.Column="0" Content="Current Application" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}"/>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="70*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="CurrentApplicationLabel" Grid.Row="0" Grid.Column="0" Content="Current Application" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}"/>
+                <Grid x:Name="ProgressBars" Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ProgressBar x:Name="GreenProgressBarUserControl" Grid.Row="0" Grid.Column="0" Height="5" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource GreenProgressBarStyle}" FocusVisualStyle="{DynamicResource GreenFocusVisualStyle}" />
+                    <ProgressBar x:Name="OrangeProgressBarUserControl" Grid.Row="0" Grid.Column="1" Height="5" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource OrangeProgressBarStyle}" FocusVisualStyle="{DynamicResource OrangeFocusVisualStyle}" />
+                    <ProgressBar x:Name="PurpleProgressBarUserControl" Grid.Row="1" Grid.Column="0" Height="5" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource PurpleProgressBarStyle}" FocusVisualStyle="{DynamicResource PurpleFocusVisualStyle}" />
+                    <ProgressBar x:Name="YellowProgressBarUserControl" Grid.Row="1" Grid.Column="1" Height="5" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource YellowProgressBarStyle}" FocusVisualStyle="{DynamicResource YellowFocusVisualStyle}" Value="{Binding StateTimeSpan.TotalSeconds, Mode=OneWay}" />
+                </Grid>
+            </Grid>
+
             <Label x:Name="CurrentApplicationTimeLabel" Grid.Row="1" Grid.Column="0" Content="Time" Background="{DynamicResource AppNameBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48"/>
             <Grid Grid.Row="2" Grid.Column="0">
                 <Grid.ColumnDefinitions>
@@ -56,18 +83,20 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Grid.Column="0">
                 <Button x:Name="OnButton"  Content="On" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="OnButton_Click"/>
-                <Rectangle Height="15"/>
+                <Rectangle Height="2"/>
                 <Button x:Name="OffButton" Content="Off" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="OffButton_Click"/>
-                
-                
+                <Rectangle Height="2"/>
+                <Button x:Name="StringTestButton" Content="String Test" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="StringTestButton_Click" />
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="0">
-                <Button x:Name="NextColorButton" Content="Next" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="NextColorButton_Click" />
-                <Button x:Name="LastColorButton" Content="Last" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="LastColorButton_Click" />
+                <Button x:Name="NextColorButton" Content="Next Color" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="NextColorButton_Click" />
+                <Button x:Name="LastColorButton" Content="Last Color" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="LastColorButton_Click" />
+                <Rectangle Height="5"/>
+                <Button x:Name="ProgramsWindowButton" Content="Running Programs" Background="{DynamicResource AppNameControlBackGroundBrush}" Foreground="{DynamicResource AppNameForeGroundBrush}" Click="ProgramsWindowButton_Click"  />
                 <Rectangle x:Name="ColorRectangle" Height="25"/>
             </StackPanel>
-            
-            
+
+
 
         </Grid>
     </Grid>

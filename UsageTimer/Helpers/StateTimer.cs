@@ -69,9 +69,12 @@ namespace UsageTimer.Helpers
 
         public void StopStateTimer()
         {
-            IsEnabled = false;
-            stateTimer.Stop();
-            StateStopTime = DateTime.Now;
+            if (isEnabled)
+            {
+                IsEnabled = false;
+                stateTimer.Stop();
+                StateStopTime = DateTime.Now;
+            }
         }
 
         #endregion

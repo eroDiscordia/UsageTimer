@@ -5,44 +5,27 @@
     <Color x:Key="main.primary.color.0">#373737</Color>
     <Color x:Key="main.primary.color.1">#727171</Color>
     <Color x:Key="main.primary.color.2">#565656</Color>
-    <Color x:Key="main.primary.color.3">#121212</Color>
-    <Color x:Key="main.primary.color.4">#000000</Color>
     <Color x:Key="main.secondary.color.1.0">#373737</Color>
     <Color x:Key="main.secondary.color.1.1">#727171</Color>
     <Color x:Key="main.secondary.color.1.2">#565656</Color>
-    <Color x:Key="main.secondary.color.1.3">#121212</Color>
-    <Color x:Key="main.secondary.color.1.4">#000000</Color>
-    <Color x:Key="main.secondary.color.2.0">#212121</Color>
     <Color x:Key="main.secondary.color.2.1">#444444</Color>
     <Color x:Key="main.secondary.color.2.2">#343434</Color>
-    <Color x:Key="main.secondary.color.2.3">#0B0B0B</Color>
-    <Color x:Key="main.secondary.color.2.4">#000000</Color>
     <Color x:Key="main.complement.color.0">#2C2C2C</Color>
     <Color x:Key="main.complement.color.1">#5B5B5B</Color>
     <Color x:Key="main.complement.color.2">#454545</Color>
-    <Color x:Key="main.complement.color.3">#0E0E0E</Color>
-    <Color x:Key="main.complement.color.4">#000000</Color>
 
     <SolidColorBrush x:Key="main.primary.color.0.brush" Color="{DynamicResource main.primary.color.0}" />
     <SolidColorBrush x:Key="main.primary.color.1.brush" Color="{DynamicResource main.primary.color.1}" />
     <SolidColorBrush x:Key="main.primary.color.2.brush" Color="{DynamicResource main.primary.color.2}" />
-    <SolidColorBrush x:Key="main.primary.color.3.brush" Color="{DynamicResource main.primary.color.3}" />
-    <SolidColorBrush x:Key="main.primary.color.4.brush" Color="{DynamicResource main.primary.color.4}" />
     <SolidColorBrush x:Key="main.secondary.color.1.0.brush" Color="{DynamicResource main.secondary.color.1.0}" />
     <SolidColorBrush x:Key="main.secondary.color.1.1.brush" Color="{DynamicResource main.secondary.color.1.1}" />
     <SolidColorBrush x:Key="main.secondary.color.1.2.brush" Color="{DynamicResource main.secondary.color.1.2}" />
-    <SolidColorBrush x:Key="main.secondary.color.1.3.brush" Color="{DynamicResource main.secondary.color.1.3}" />
-    <SolidColorBrush x:Key="main.secondary.color.1.4.brush" Color="{DynamicResource main.secondary.color.1.4}" />
-    <SolidColorBrush x:Key="main.secondary.color.2.0.brush" Color="{DynamicResource main.secondary.color.2.0}" />
     <SolidColorBrush x:Key="main.secondary.color.2.1.brush" Color="{DynamicResource main.secondary.color.2.1}" />
     <SolidColorBrush x:Key="main.secondary.color.2.2.brush" Color="{DynamicResource main.secondary.color.2.2}" />
-    <SolidColorBrush x:Key="main.secondary.color.2.3.brush" Color="{DynamicResource main.secondary.color.2.3}" />
-    <SolidColorBrush x:Key="main.secondary.color.2.4.brush" Color="{DynamicResource main.secondary.color.2.4}" />
     <SolidColorBrush x:Key="main.complement.color.0.brush" Color="{DynamicResource main.complement.color.0}" />
     <SolidColorBrush x:Key="main.complement.color.1.brush" Color="{DynamicResource main.complement.color.1}" />
     <SolidColorBrush x:Key="main.complement.color.2.brush" Color="{DynamicResource main.complement.color.2}" />
-    <SolidColorBrush x:Key="main.complement.color.3.brush" Color="{DynamicResource main.complement.color.3}" />
-    <SolidColorBrush x:Key="main.complement.color.4.brush" Color="{DynamicResource main.complement.color.4}" />
+
 
     
 </ResourceDictionary>
